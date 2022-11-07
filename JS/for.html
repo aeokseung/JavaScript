@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      for (var i = 0; i < 3; i++) {
+        console.log("jj");
+      }
+      for (var i = 0; i < 4; i++) {
+        console.log("image" + (10 * i + 1) + ".png");
+      }
+      var i = 0;
+      while (i < 4) {
+        console.log("image" + (10 * i + 1) + ".png");
+        i++;
+      }
+      i = 0;
+      do {
+        console.log("image" + (10 * i + 1) + ".png");
+        i++;
+      } while (i < 4);
+      var obj = { name: "adam", age: 26 };
+      var ar = [100, 300, 200];
+      //obj가 가진 모든 속성을 attr에 대입하고 {}안의 내용 수정
+      for (var attr in obj) {
+        alert(attr + ":" + obj[attr]);
+      }
+      //배열은 인덱스가 순서대로 attr에 대입
+      for (var attr in ar) {
+        alert(attr + ":" + ar[attr]);
+      }
+    </script>
+  </body>
+</html>
