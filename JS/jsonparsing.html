@@ -8,14 +8,16 @@
   </head>
   <body>
     <script>
-      let f = () => {
-        for (var i = 0; i < 3; i++) {
-          console.log("func");
-        }
-      };
-      f();
-      console.log("interruption");
-      f();
+      var jsonText = '{ "name": "adam", "age": 47 }';
+      var result = JSON.parse(jsonText);
+      console.log(result.name);
+      console.log(result.age);
+
+      jsonText = "[40,50,20,40]";
+      result = JSON.parse(jsonText);
+      result.forEach((e) => {
+        console.log(e);
+      });
     </script>
   </body>
 </html>

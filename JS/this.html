@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let obj = {
+        name: "adam",
+        getName: function () {
+          //js는 메서드 안에서 자신의 객체에 속한 속성을 호출하려면 this. 을 붙여야 한다
+          return this.name;
+        },
+      };
+      console.log(obj.getName());
+      //name과 song이라는 속성을 갖는 생성자
+      //매개변수가 없는 생성자를 default constructor라고 합니다
+      let singer = function () {
+        //this가 없으면 지역변수가 만들어짐, this와 함께 만들어야 객체의 속성이 됨
+        this.name = "no name";
+        this.song = "no song";
+      };
+      //생성자를 이용한 인스턴스 생성
+      var obj1 = new singer();
+      console.log(obj1);
+
+      let artist = function (name = "no name", job = "uncertified") {
+        this.name = name;
+        this.job = job;
+      };
+      var suzi = new artist("suzi1", "singer");
+      var iu = new artist("iu1", "singer");
+      var tae = new artist("taeyeon");
+      console.log(suzi);
+      console.log(iu);
+      console.log(tae);
+    </script>
+  </body>
+</html>

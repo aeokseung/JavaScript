@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //배열은 iterator를 준수해서 순서대로 대입
+      var ar = [100, 200, 300, 400];
+      let [one, two, three, four] = ar;
+      console.log(one);
+
+      //iterator가 없어서 이름을 보고 대입
+      var obj = { name: "karina", job: "singer" };
+      let { job, name } = obj;
+      console.log(name);
+
+      let display = ({ msg, n }) => {
+        //let { msg, n } = ob;
+        for (let i = 0; i < n; i++) {
+          console.log(msg);
+        }
+      };
+      display({ n: 3, msg: "message" });
+
+      var br = [100, 200, 300, 400];
+      var ins = {
+        name: "karina",
+        job: "singer",
+        company: "SM",
+        group: "aespa",
+      };
+      //spread 연산
+      let [first, ...etc] = br;
+      console.log(etc);
+
+      let { name1, job1, ...attr } = ins;
+      console.log(attr);
+
+      function rest({ name1, job1, ...attr }) {
+        console.log(attr);
+      }
+
+      rest(ins);
+
+      //기본값 설정 가능
+      let [a, b, c, d, e = 50] = br;
+      console.log(d);
+    </script>
+  </body>
+</html>

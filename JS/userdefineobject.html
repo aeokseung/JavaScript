@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let obj = {
+        name: "adam",
+        title: "cyber singer",
+        album: "genesis",
+        disp: function () {
+          return this.name + ":" + this.title + ":" + this.album;
+        },
+      };
+      console.log(obj.name);
+      console.log(obj["name"]);
+      console.log(obj.disp());
+      //obj의 모든 속성을 순서대로 attr에 문자열 형태로 대입
+      for (attr in obj) {
+        console.log(obj[attr]);
+      }
+      //속성 존재 여부
+      console.log("name" in obj);
+      console.log("age" in obj);
+      //블럭 안에서 obj 생략 가능
+      with (obj) {
+        console.log(title);
+      }
+      //속성 추가, 변경
+      obj.company = "adamsoft";
+      obj.title = "exodus";
+      delete obj.album;
+      console.log(obj);
+    </script>
+  </body>
+</html>

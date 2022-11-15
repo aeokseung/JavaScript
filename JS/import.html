@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./import.js" type="module"></script>
+    <script>
+      var obj = {
+        name: "adam",
+        job: "singer",
+        toString: function () {
+          return this.name + ":" + this.job;
+        },
+      };
+      //toString은 직접 호출하지 않고 출력하는 메서드에 객체 이름만 대입하면 자동으로 호출
+      //클래스를 만들 때 toString을 오버라이딩하면 출력할 때
+      console.log(obj);
+    </script>
+  </head>
+  <body></body>
+</html>

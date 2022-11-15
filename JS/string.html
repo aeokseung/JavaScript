@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var company = "adamsoft";
+      console.log(company.length);
+      console.log("0번째 문자: " + company.charAt(0));
+      console.log("0번째 문자 아스키코드: " + company.charCodeAt(0));
+      console.log("대문자로 변환: " + company.toUpperCase());
+      let sample = "  abcd  ";
+      console.log("remove blank: " + "  asdf  ".trim());
+
+      var result = " ";
+      var len = sample.length;
+      for (var i = 0; i < len; i++) {
+        if (sample.charAt(i) !== " ") {
+          result = result + sample.charAt(i);
+        }
+      }
+      console.log("remove blank: " + result);
+
+      console.log(company.indexOf("a")); //앞에서부터
+      console.log(company.lastIndexOf("a")); //뒤에서부터, 못찾으면 음수
+      console.log(company.indexOf("x"));
+
+      var uri = "abc/def";
+      var ar = uri.split("/");
+      console.log(ar[0]);
+      console.log(ar[ar.length - 1]);
+
+      console.log(uri.substring(1));
+      console.log(uri.substring(1, 5));
+
+      var data = 42;
+      console.log(data + "입니다");
+      console.log(`${data}입니다.`);
+      /*  console.log("중간에 줄바꿈하면
+       에러"); */
+      console.log(`빽틱은 줄바꿈해도 에러x`);
+
+      let today = new Date();
+      let meetday = new Date(1986, 3, 5);
+      console.log(meetday);
+      var interval = today.getTime() - meetday.getTime();
+      var date = interval / (1000 * 60 * 60 * 24);
+      console.log("number of days passed: " + Math.round(date));
+    </script>
+  </body>
+</html>

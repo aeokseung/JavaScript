@@ -8,14 +8,10 @@
   </head>
   <body>
     <script>
-      let f = () => {
-        for (var i = 0; i < 3; i++) {
-          console.log("func");
-        }
-      };
-      f();
-      console.log("interruption");
-      f();
+      //영문과 숫자 이외의 문자가 있으면 변환
+      var url = "https://www.donga.com/news/search?query=반도체";
+      var param = encodeURI(url);
+      console.log(param);
     </script>
   </body>
 </html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function f1(n, msg) {
+        //js에서는 매개변수로 대입된 데이터를 arguments에도 저장
+        //화살표 함수에서는 arguments 사용 X
+        for (var i = 0; i < arguments[0]; i++) {
+          console.log(arguments[1]);
+        }
+      }
+      f1(3, "arguments");
+
+      function f2(n, msg) {
+        console.log(n);
+        console.log(msg);
+        console.log(arguments[2]);
+      }
+      f2(10);
+      f2(10, "javascript", "123");
+    </script>
+  </body>
+</html>
