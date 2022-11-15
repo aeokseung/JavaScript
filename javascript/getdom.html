@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="header">title</h1>
+    <p id="content">hi</p>
+    <input type="text" value="adam" id="alias" />
+
+    <!--form안에 있으면 submit기능-->
+    <button>button1</button>
+    <input type="button" value="button2" />
+    <script>
+      let h1 = document.getElementById("header");
+      h1.style.color = "red";
+      h1.style.border = "2px solid black";
+      document.getElementById("content").innerHTML += " text change";
+      alert(document.getElementById("alias").value);
+
+      /* document.getElementById('btn').onclick=function(){
+        alert('고전적 이벤트 처리 모델')
+      } */
+      document.getElementById("btn").addEventListener("click", () => {
+        allert("표준 이벤트 모델");
+      });
+    </script>
+  </body>
+</html>
